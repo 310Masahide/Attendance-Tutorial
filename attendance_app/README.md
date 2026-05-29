@@ -1,10 +1,8 @@
-# 勤怠システムを開発しよう！
+# サンプルアプリケーション（Docker 版手順）
 
-これはセレブエンジニアサロンの教材で作られたサンプルアプリケーションです。
+### 1) dockerコンテナ起動(Rails Server起動)
 
-## 開発環境
-
-- VSCode
-- Ruby
-- Rails
-- Git
+```bash
+$ docker-compose up -d
+$ docker attach attendance_app-web-1
+```
