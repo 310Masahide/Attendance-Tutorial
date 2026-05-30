@@ -62,7 +62,8 @@ RUN apt-get update -qq && \
 
 # Copy built artifacts: gems, application
 COPY --from=build /usr/local/bundle /usr/local/bundle
-COPY --from=build /rails /rails
+COPY --from=build /myapp /myapp
+RUN chmod +x /myapp/entrypoint.sh
 
 
 RUN gem install bundler -v 2.5.23
@@ -73,7 +74,7 @@ USER rails:rails
 
 
 # Entrypoint prepares the database.
-ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+ENTRYPOINT ["/myapp/entrypoint.sh"]
 
 
 # Start the server by default, this can be overwritten at runtime
