@@ -1,5 +1,7 @@
 # coding: utf-8
 
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE users")
+
 User.create!(name: "Sample User",
              email: "sample@email.com",
              password: "password",
