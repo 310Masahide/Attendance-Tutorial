@@ -1,6 +1,7 @@
 # coding: utf-8
 
-ActiveRecord::Base.connection.execute("TRUNCATE TABLE users")
+Attendance.delete_all
+User.delete_all
 
 User.create!(name: "Sample User",
              email: "sample@email.com",

@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # ログイン機能
   get    '/login', to: 'sessions#new'
   post   '/login', to: 'sessions#create'
-  get    '/logout', to: 'sessions#destroy'
   delete '/logout', to: 'sessions#destroy'
 
   resources :users do
@@ -13,5 +12,6 @@ Rails.application.routes.draw do
       get 'edit_basic_info'
       patch 'update_basic_info'
     end
+    resources :attendances, only: :update # この行を追加します。
   end
 end

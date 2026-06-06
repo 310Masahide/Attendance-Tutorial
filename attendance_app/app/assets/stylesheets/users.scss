@@ -5,6 +5,19 @@
   text-align: center;
 }
 
+/* ユーザー勤怠情報テーブル */
+
+#table-attendances {
+  th {
+    vertical-align: middle;
+    text-align: center;
+  }
+  td {
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
 /* 入力フォーム */
 
 .label-signup {
@@ -23,11 +36,15 @@
   margin-top: 10px;
 }
 
+/* ユーザー一覧ページ */
+
 #table-users {
   td {
     vertical-align: middle;
-  }
+  }  
 }
+
+/* 基本情報編集モーダルウインドウ */
 
 .label-basic-info {
   margin-top: 5px;
