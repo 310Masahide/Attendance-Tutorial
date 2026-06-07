@@ -18,6 +18,15 @@ gem 'bcrypt'
 gem 'will_paginate', '~> 3.3'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'rails-i18n'
+gem 'capybara', '>= 3.26'
+gem 'selenium-webdriver'
+gem 'webdrivers'
+gem 'rails-flog', require: 'flog'
+gem 'rspec-rails'
+gem "factory_bot_rails"
+gem 'faker'
+gem 'database_cleaner'
+gem 'rails-controller-testing'
 
 
 group :development, :test do
