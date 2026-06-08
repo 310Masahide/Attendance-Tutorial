@@ -1,0 +1,28 @@
+databases:
+  - name: attendance-db
+    databaseName: attendance_production
+    user: attendance
+    plan: free
+
+services:
+  - type: web
+    name: attendance-app
+    runtime: ruby
+    plan: free
+    repo: https://github.com/310Masahide/Attendance-Tutorial
+    rootDir: attendance_app
+    buildCommand: bundle install && bundle exec rails assets:precompile && bundle exec rails db:migrate
+    startCommand: bundle exec rails server -p $PORT -e production
+    envVars:
+      - key: RAILS_ENV
+        value: production
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: attendance-db
+          property: connectionString
+      - key: RAILS_LOG_TO_STDOUT
+        value: "true"
+      - key: WEB_CONCURRENCY
+        value: "2"

@@ -33,9 +33,8 @@ RUN apt-get update -qq && \
 # Copy application code first, then install gems
 COPY . .
 
-# Install application gems (update ffi/nokogiri to versions available on linux)
-RUN bundle update ffi nokogiri && \
-  bundle install && \
+# Install application gems
+RUN bundle install && \
   rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
   bundle exec bootsnap precompile --gemfile
 
@@ -64,7 +63,7 @@ RUN chmod +x /myapp/entrypoint.sh
 RUN gem install bundler -v 2.5.23
 # Run and own only the runtime files as a non-root user for security
 RUN useradd rails --create-home --shell /bin/bash && \
-  chown -R rails:rails db log storage tmp
+  chown -R rails:rails db log storage tmp /usr/local/bundle
 USER rails:rails
 
 
