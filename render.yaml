@@ -1,12 +1,11 @@
 services:
   - type: web
     name: attendance-app
-    env: ruby
+    env: docker
     plan: free
     repo: https://github.com/310Masahide/Attendance-Tutorial
-    rootDir: attendance_app
-    buildCommand: bundle install && bundle exec rails assets:precompile
-    startCommand: bundle exec rails db:migrate && bundle exec rails server -p $PORT -e production
+    dockerfilePath: attendance_app/Dockerfile
+    dockerContext: attendance_app
     envVars:
       - key: RAILS_ENV
         value: production
@@ -16,5 +15,3 @@ services:
         sync: false
       - key: RAILS_LOG_TO_STDOUT
         value: "true"
-      - key: WEB_CONCURRENCY
-        value: "2"
