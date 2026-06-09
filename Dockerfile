@@ -24,8 +24,6 @@ RUN bundle install && \
 
 RUN bundle exec bootsnap precompile app/ lib/
 
-RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
-
 
 FROM base
 
@@ -38,7 +36,7 @@ COPY --from=build /myapp /myapp
 RUN chmod +x /myapp/entrypoint.sh
 
 RUN useradd rails --create-home --shell /bin/bash && \
-  chown -R rails:rails db log storage tmp /usr/local/bundle
+  chown -R rails:rails db log storage tmp public /usr/local/bundle
 USER rails:rails
 
 ENTRYPOINT ["/myapp/entrypoint.sh"]
