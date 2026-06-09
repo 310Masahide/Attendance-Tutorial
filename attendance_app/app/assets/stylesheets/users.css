@@ -14,18 +14,18 @@
 
 /* ユーザー勤怠情報テーブル */
 
-#table-attendances {
-  th {
-    vertical-align: middle;
-    text-align: center;
-  }
-  td {
-    vertical-align: middle;
-    text-align: center;
-  }
-  input.form-control {
-    text-align: center;
-  }
+#table-attendances th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#table-attendances td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+#table-attendances input.form-control {
+  text-align: center;
 }
 
 /* 入力フォーム */
@@ -48,10 +48,8 @@
 
 /* ユーザー一覧ページ */
 
-#table-users {
-  td {
-    vertical-align: middle;
-  }  
+#table-users td {
+  vertical-align: middle;
 }
 
 /* 基本情報編集モーダルウインドウ */

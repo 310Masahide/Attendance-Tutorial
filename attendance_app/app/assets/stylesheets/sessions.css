@@ -11,7 +11,8 @@
 .checkbox-login {
   width: auto;
   margin-left: 25px;
-  span {
-    font-weight: normal;
-  }
+}
+
+.checkbox-login span {
+  font-weight: normal;
 }
