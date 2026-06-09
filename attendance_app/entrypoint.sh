@@ -11,8 +11,8 @@ echo "🔄 データベース接続確認中..."
 bundle exec rails db:version 2>/dev/null || echo "データベース未初期化"
 
 
-echo "🗄️ データベースマイグレーション実行中..."
-bundle exec rails db:migrate
+echo "🗄️ データベース準備中（作成＋マイグレーション）..."
+bundle exec rails db:prepare
 
 
 echo "🌱 シードデータ投入中..."
