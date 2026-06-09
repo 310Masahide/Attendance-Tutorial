@@ -110,6 +110,8 @@ GEM
     drb (2.2.3)
     erb (6.0.4)
     erubi (1.13.1)
+    faker (3.8.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.17.4-aarch64-linux-gnu)
     ffi (1.17.4-arm64-darwin)
     ffi (1.17.4-x86_64-linux-gnu)
@@ -287,6 +289,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  faker
   importmap-rails
   jbuilder
   listen (~> 3.3)
