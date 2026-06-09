@@ -5,6 +5,7 @@ ja:
   date:
     formats:
       middle: "%Y年%-m月"
+      short: "%Y/%m/%d"
   time:
     formats:
       time: "%-H:%M"
