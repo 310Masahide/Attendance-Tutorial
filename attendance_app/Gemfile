@@ -13,6 +13,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "bootsnap", require: false
 gem "bcrypt", "~> 3.1.7"
+gem "will_paginate", "~> 4.0"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 
 
