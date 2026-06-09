@@ -22,9 +22,5 @@ bundle exec rails db:seed 2>/dev/null || echo "シードデータ投入スキッ
 echo "✅ データベース初期化完了！"
 
 
-echo "🎨 アセットプリコンパイル中..."
-bundle exec rails assets:precompile 2>/dev/null || echo "アセットプリコンパイルスキップ（既にコンパイル済み等）"
-
-
 # DockerfileのCMDで渡されたコマンド（Railsサーバー起動）を実行
 exec "$@"
