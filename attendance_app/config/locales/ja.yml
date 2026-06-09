@@ -1,4 +1,7 @@
 ja:
+  will_paginate:
+    previous_label: '前ページ'
+    next_label: '次ページ'
   date:
     formats:
       middle: "%Y年%-m月"
