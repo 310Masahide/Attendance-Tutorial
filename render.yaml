@@ -4,11 +4,7 @@ services:
     env: docker
     plan: free
     repo: https://github.com/310Masahide/Attendance-Tutorial
-    dockerfilePath: attendance_app/Dockerfile
-    dockerContext: attendance_app
     envVars:
-      - key: RAILS_ENV
-        value: production
       - key: RAILS_MASTER_KEY
         sync: false
       - key: DATABASE_URL
